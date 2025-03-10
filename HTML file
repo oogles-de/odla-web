@@ -1,0 +1,1 @@
+echo "<!DOCTYPE html><html><head><title>Web Hosting Server</title></head><body><h1>Welcome to the Web Hosting Server</h1></body></html>" > public/index.html

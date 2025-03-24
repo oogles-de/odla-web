@@ -1,0 +1,30 @@
+name: Site Monitor
+
+on:
+  schedule
+    # Runs every 15 minutes
+    - cron: '*/15 * * * *'
+ workflow_dispatch:
+
+ jobs:
+   check_site:
+      runs-on: ubuntu-latest
+
+steps:
+- name: Check site status
+   run: |
+     response=$(curl --write-out '%{http_code}' --Silent --output /dev/null http://nivaa.org')
+     if [ $response -ne 200 ]; then
+       echo "Site is down"
+       exit 1
+     else
+       echo "Site is up"
+      fi
+
+      - name: send notification if site is down
+      if: failure()
+      run: |
+        # Add your notification logic here
+        # For example, send an email using SendGrid, or a message
+        to a Slack channel
+        echo "Sending notification about the site being down"

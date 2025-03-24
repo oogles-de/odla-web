@@ -1,0 +1,5 @@
+name: Deploy sitepads and Web
+
+on:
+  push:
+    branches:

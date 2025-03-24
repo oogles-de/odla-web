@@ -1,0 +1,5 @@
+name: Deploy SSL certificates
+
+on:
+  push:
+    branches:

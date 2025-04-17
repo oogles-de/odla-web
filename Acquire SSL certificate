@@ -1,0 +1,3 @@
+sudo certbot --apache -d
+plan2and3server.com -d
+www.plan2and3server.com

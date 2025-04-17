@@ -1,0 +1,4 @@
+sudo a2ensite
+plan2and3server.com.conf
+sudo a2dissite 000-default.conf
+sudo systemctl reload apache2

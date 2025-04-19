@@ -1,0 +1,4 @@
+sudo mkdir -p /var/www/mywebsite/{html,logs,backup}
+sudo chown -R www-data:www-data /var/www/mywebsite
+sudo chmod -R 755 /var/www/mywebsite
+echo "<html><body><h1>It works!</h1>/body></html>" | sudo tee /var/www/mywebsite/html/index.html

@@ -1,0 +1,4 @@
+mkdir -p ~/my-personal-website/{public_html,logs,backup}
+chmod -R 755 ~/my-personal-website
+sudo In -s ~/my-personal-website/public_html /var/www/html/personal-website
+sudo nano /etc/apache2/sites-available/personal-website.conf

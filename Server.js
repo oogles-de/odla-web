@@ -1,8 +1,7 @@
-mkdir webhosting-server
-cd webhosting-server
-npm init -y
-npm install express
-echo "const express = require('express'); const app = express(); const port = 3000; app.use(express.static('public')); app.listen(port, () => console.log(\'Server running on port \${port}\'))"> server.js
-mkdir public
-echo "<!DOCTYPE html><html><head><title>Web hosting Server</title></head><body><h1>Welcome to the Web Hosting Server</h1></body></html>" > public/index.html
-node server.js
+sudo mkdir -p /var/www/mywebsite/{html,logs,backup}
+sudo chown -R www-data:www-data /var/www/mywebsite
+sudo chmod -R 755 /var/www/mywebsite
+echo "<html><body><h1>It works!</h1>/body></html>" | sudo tee /var/www/mywebsite/html/index.html
+
+
+
